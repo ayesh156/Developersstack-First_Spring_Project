@@ -1,9 +1,12 @@
 package com.studentapp.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+
 import lombok.*;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Getter
 @Setter
@@ -11,6 +14,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 @Entity
+@Table
 public class Student {
     @Id
     private long id;

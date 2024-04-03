@@ -1,4 +1,34 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page isELIgnored="false"%>
 <jsp:include page="header.jsp"/>
-<div style="display: flex; height: 100vh; align-items: center; justify-content: center">
-    <h1 style="margin: 0">Home Page</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>#Id</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Salary</th>
+                    <th>Option</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach items="${students}" var="student">
+                <tr>
+                    <td>${student.id}</td>
+                    <td>${student.name}</td>
+                    <td>${student.address}</td>
+                    <td>${student.salary}</td>
+                    <td>
+                        <a class="btn btn-success" href="#">Update</a> |
+                        <a class="btn btn-danger" href="#">Delete</a>
+                    </td>
+                </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
