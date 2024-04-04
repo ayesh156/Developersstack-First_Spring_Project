@@ -22,8 +22,8 @@
                     <td>${student.address}</td>
                     <td>${student.salary}</td>
                     <td>
-                        <a class="btn btn-success" href="#">Update</a> |
-                        <a class="btn btn-danger" href="#">Delete</a>
+                        <a class="btn btn-success" href="edit-student/${student.id}">Update</a> |
+                        <a class="btn btn-danger" href="delete-student/${student.id}">Delete</a>
                     </td>
                 </tr>
                 </c:forEach>
